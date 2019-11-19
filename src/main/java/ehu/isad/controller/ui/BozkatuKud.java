@@ -51,7 +51,7 @@ public class BozkatuKud implements Initializable {
 
         @Override
     public void initialize(URL location, ResourceBundle resources) {
-        EurobisioaDBKud eurobisioaDBKud = new EurobisioaDBKud();
+        EurobisioaDBKud eurobisioaDBKud = EurobisioaDBKud.getInstantzia();
         ObservableList<Datuak> lista = eurobisioaDBKud.sql3("Alemania");
 
         bandera.setImage(eurobisioaDBKud.bilatuIzenazHerrialdea(herrialdea));
@@ -99,7 +99,7 @@ public class BozkatuKud implements Initializable {
     }
 
     public void onClick(ActionEvent actionEvent) {
-        eurobisioaDBKud= new EurobisioaDBKud();
+        eurobisioaDBKud= EurobisioaDBKud.getInstantzia();
         Integer puntuTotalak=0;
         for(int i=0;i<tabla.getItems().size();i++) {
             puntuTotalak = puntuTotalak + puntuak.getCellData(i);
@@ -111,7 +111,7 @@ public class BozkatuKud implements Initializable {
                 if (puntuak.getCellData(i) != 0) {
                     Datuak item = tabla.getItems().get(i);
                     eurobisioaDBKud.sql4("Alemania", item.getIzena(), item.getPuntuak());
-                    //eurobisioaDBKud.sql5(item.getIzena(), item.getPuntuak());
+                    eurobisioaDBKud.sql5(item.getIzena(), item.getPuntuak());
                 }
             }
             mainApp.irekiPuntuakIkusi();

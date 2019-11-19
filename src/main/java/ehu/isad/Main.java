@@ -97,5 +97,8 @@ public class Main extends Application {
     infoKud.setHerrialdea(herrialdea);
   }
 
+public void itxi(){
 
+  stage.close();
+}
 }

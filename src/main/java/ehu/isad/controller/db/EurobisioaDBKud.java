@@ -23,7 +23,7 @@ public class EurobisioaDBKud {
       return instantzia;
   };
 
-  public EurobisioaDBKud(){}
+  private EurobisioaDBKud(){}
 
   public ObservableList<Datuak> sql3(String hautatutakoHerrialde){
       ObservableList<Datuak> emaitza = FXCollections.observableArrayList();
@@ -120,6 +120,36 @@ public class EurobisioaDBKud {
 
 
 
+    public ArrayList<ArrayList<String>> lortuDatuak(){
+
+        DBKudeatzaile dbkud = DBKudeatzaile.getInstantzia();
+
+        String query = "select o.herrialdea , o.puntuak , h.bandera from Ordezkaritza o, Herrialde h where o.herrialdea=h.izena and urtea=strftime('%Y','now' ) order by puntuak desc limit 3 ";
+
+        ResultSet rs = dbkud.execSQL(query);
+
+
+        ArrayList<ArrayList<String>> lista = new ArrayList<ArrayList<String>>();
+
+        try {
+            while (rs.next()) {
+                String izena=rs.getString("herrialdea");
+                int puntuak= rs.getInt("puntuak");
+                String bandera=rs.getString("bandera");
+
+                ArrayList<String> lerroa = new ArrayList<String>();
+                lerroa.add(bandera);
+                lerroa.add(izena);
+                lerroa.add(Integer.toString(puntuak));
+                lista.add(lerroa);
+            }
+        }catch (SQLException e){
+            System.err.println(e);
+        }
+
+
+        return lista;
+    }
+
 }
-  
 
