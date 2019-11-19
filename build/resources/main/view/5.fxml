@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="600.0" styleClass="background" stylesheets="@../css/necarea.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ehu.isad.controller.ui.BozkatuKud">
+   <children>
+      <ImageView fx:id="bandera" fitHeight="63.0" fitWidth="104.0" layoutX="19.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="78.0" fitWidth="148.0" layoutX="441.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../eurobisioa.png" />
+         </image></ImageView>
+      <Label fx:id="labelG" layoutX="158.0" layoutY="39.0" text=" horrela nahi ditu bere puntuak banatu" />
+      <Button layoutX="281.0" layoutY="384.0" mnemonicParsing="false" onAction="#onClick" text="OK" />
+      <TableView fx:id="tabla" layoutX="19.0" layoutY="85.0" prefHeight="258.0" prefWidth="572.0">
+        <columns>
+          <TableColumn fx:id="argazki" prefWidth="75.0" />
+          <TableColumn fx:id="herrialde" prefWidth="129.0" text="Herrialdea" />
+            <TableColumn fx:id="artista" prefWidth="93.0" text="Artista" />
+            <TableColumn fx:id="abestia" prefWidth="180.0" text="Abestia" />
+            <TableColumn fx:id="puntuak" prefWidth="94.0" text="Puntuak" />
+        </columns>
+      </TableView>
+      <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="356.0" prefHeight="16.0" prefWidth="572.0" text="Bost puntu dituzu nahi duzun eran banatzeko" textAlignment="CENTER" textFill="#ff1313" />
+   </children>
+</AnchorPane>

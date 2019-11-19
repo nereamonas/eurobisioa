@@ -1,0 +1,46 @@
+
+.background {
+    -fx-background-color: rgba(246, 253, 255, 0.9);
+    -fx-border-color: rgba(95, 200, 229, 0.65);
+    -fx-border-width: 4;
+}
+
+.label {
+    -fx-text-fill: black;
+}
+
+.button {
+    -fx-border-color: rgba(95, 200, 229, 0.65);
+    -fx-background-color: rgba(192, 239, 248, 0.65);
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+}
+
+
+.combo-box {
+    -fx-background-color: rgba(192, 239, 248, 0.65);
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+}
+
+.text-field {
+
+}
+
+.menu-bar,.menu-item,.menu-button{
+    -fx-background-color: rgba(192, 239, 248, 0.97);
+    -fx-border-color: rgba(95, 200, 229, 0.65);
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+}
+
+.tab {
+    -fx-background-color: rgba(192, 239, 248, 0.65);
+    -fx-border-color: rgba(95, 200, 229, 0.65);
+    -fx-cursor: hand;
+}
+
+.table-column {
+    -fx-background-color: rgba(197, 246, 255, 0.34);
+    -fx-border-color: rgba(95, 200, 229, 0.65);
+}
